@@ -1,0 +1,33 @@
+* {
+    font-family: Allerta Stencil;
+    color: #4CAF50;
+    margin-block-end: 1px;
+}
+input[type=text] {
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+}
+.buttonTrue {
+  background-color: #4CAF50;
+  border-color: white;
+  color: white;
+}
+.buttonFalse {
+  background-color: white;
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+button[type=button] {
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: solid;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.fadeout {
+  color: #7A80D6;
+//  opacity: 1;
+//  transition: 3s opacity;
+}
