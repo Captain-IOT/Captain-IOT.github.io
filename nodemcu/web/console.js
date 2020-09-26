@@ -37,8 +37,8 @@ function fadeout(){
 function onText(event,uri,id){
 	if (event.keyCode == 13){
 		var txt = document.getElementById(id);
-		req(uri+'?'+txt.value.id+'='txt.value,id);
-//		req(uri+'?value='+txt.value,id);
+//		req(uri+'?'+txt.value.id+'='txt.value,id);
+		req(uri+'?value='+txt.value,id);
 		return false;
 	}
 }
