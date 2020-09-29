@@ -42,3 +42,8 @@ function onText(event,uri,id){
 		return false;
 	}
 }
+
+function onSelect(uri,id){
+	var e = document.getElementById(id);
+	req(uri+'?value='+e.options[e.selectedIndex].value,id);	
+}
