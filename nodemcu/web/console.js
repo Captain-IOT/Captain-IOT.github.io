@@ -26,7 +26,10 @@ function setControl(baseUri,id){
 function sendUIUpdate(uri,id){
 	var value = "?value=";
 	var widget = document.getElementById(id);
-	if (widget instanceof HTMLButtonElement){
+	if (uri.indexOf("?value=")>0){
+		value = uri.substring(uri.indexOf("?"));
+	}
+	else if (widget instanceof HTMLButtonElement){
 		value += widget.className.contains('buttonTrue') ? "0" : "1";
 	}
 	else if (widget instanceof HTMLInputElement){
