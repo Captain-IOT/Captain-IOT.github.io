@@ -38,20 +38,20 @@ function sendUIUpdate(uri,id){
 	var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
 	    if (this.readyState==4 && this.status==200){
-			var text = this.responseText;
+			var json = JSON.parse(this.responseText);
 
 			var widget = document.getElementById(id);
 			if (widget instanceof HTMLButtonElement){
-				if (text=='1')
+				if (json.value=='1')
 					widget.className='buttonTrue';
 				else
 					widget.className='buttonFalse';
 			}
 			else if (widget instanceof HTMLInputElement){
-				widget.value=text;
+				widget.value=json.value;
 			}
 			else if (widget instanceof HTMLSelectElement){
-				widget.value=text;
+				widget.value=json.value;
 			}
 		}
 	}
