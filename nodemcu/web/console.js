@@ -56,6 +56,11 @@ function sendUIUpdate(uri,id){
 			else if (widget instanceof HTMLSelectElement){
 				widget.value=json.value;
 			}
+			var span = document.getElementById(id+'_RESP');
+			span.innerText = json.response;
+		   	span.style.opacity = '1';
+		   	span.style.transition = '1s opacity';
+			window.setTimeout(fadeout, 6000);
 		}
 	}
   	xhttp.open("GET",uri+value,true);
