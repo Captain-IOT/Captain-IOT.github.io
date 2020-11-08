@@ -33,7 +33,7 @@ function sendUIUpdate(uri,id){
 		value += widget.className.contains('buttonTrue') ? "0" : "1";
 	}
 	else if (widget instanceof HTMLInputElement){
-		value += widget.value;
+		value += widget.value.startsWith("#") ? widget.value.substring(1) : widget.value;
 	}
 	else if (widget instanceof HTMLSelectElement){
 		value += widget.value;
