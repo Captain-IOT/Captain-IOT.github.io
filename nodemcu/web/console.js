@@ -30,7 +30,7 @@ function sendUIUpdate(uri,id){
 		value = uri.substring(uri.indexOf("?"));
 	}
 	else if (widget instanceof HTMLButtonElement){
-		value += widget.className.contains('buttonTrue') ? "0" : "1";
+		value += widget.classList.contains('buttonTrue') ? "0" : "1";
 	}
 	else if (widget instanceof HTMLInputElement){
 		value += widget.value.startsWith("#") ? widget.value.substring(1) : widget.value;
